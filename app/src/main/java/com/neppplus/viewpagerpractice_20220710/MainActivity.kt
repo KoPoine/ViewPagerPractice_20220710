@@ -2,7 +2,9 @@ package com.neppplus.viewpagerpractice_20220710
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import com.neppplus.viewpagerpractice_20220710.adapters.MainViewPagerAdapter
+import com.neppplus.viewpagerpractice_20220710.fragments.NameFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,5 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         mPagerAdapter = MainViewPagerAdapter(supportFragmentManager)
         mainViewPager.adapter = mPagerAdapter
+
+        mainTabLayout.setupWithViewPager(mainViewPager)
     }
 }
